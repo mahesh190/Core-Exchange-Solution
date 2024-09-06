@@ -1,0 +1,128 @@
+.main-content {
+  height: 100vh;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  background: #D3D3D3;
+  border: 1px solid #000000;
+  text-align: center;
+  width: 300px;
+  max-width: 400px;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 14px 14px;
+  color: #000;
+  font-family: 'Poppins' !important;
+}
+
+table td {
+  border: 1px solid #000000;
+  text-align: center;
+  white-space: nowrap;
+  font-family: 'Poppins' !important;
+  padding: 0 !important;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.mat-sort-header-container {
+  display: flex;
+  justify-content: center !important;
+}
+
+table {
+  width: 800px;
+}
+
+th.mat-column-action {
+  width: 20px;
+  padding: 4px 32px;
+}
+
+td.mat-column-action {
+  width: 20px;
+  padding: 14px 32px;
+}
+
+th.mat-column-position,
+td.mat-column-position {
+  padding-left: 8px;
+}
+
+.mat-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+.mat-sort-header-container {
+  background: red;
+}
+
+::ng-deep .mat-sort-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-row.hovered {
+  background: #eee;
+}
+
+.main-content {
+  background: linear-gradient(to bottom, #e9deed, #f9f3da, #ededee);
+}
+
+.mat-row.highlighted {
+  background: #999;
+}
+
+.mat-row:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+.material-icons {
+  margin: -1px 5px 0 0;
+}
+
+::ng-deep .mat-paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  padding: 0 8px;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #000 !important;
+  // opacity: 1!important;
+}
+::ng-deep  .mat-form-field-appearance-outline .mat-form-field-infix{
+  // display: flex !important;
+  // padding: 4px 0px;
+}
+
+#list {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}

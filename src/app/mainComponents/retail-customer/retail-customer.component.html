@@ -1,0 +1,240 @@
+<div class="row" style="margin-bottom: 25px">
+  <div class="col-sm-12">
+    <h3>Retail Customer</h3>
+  </div>
+</div>
+
+<form [formGroup]="Empregister">
+  <mat-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="personform">
+      <div formGroupName="persnalDetails">
+        <ng-template matStepLabel>Personal Details</ng-template>
+        <div class="row">
+          <div class="col-md-4">
+            <!-- <span>First Name</span> -->
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+
+              <input matInput required type="text" placeholder="Last name" formControlName="firstname" />
+              <mat-error *ngIf="personform.value.firstname">Please Enter Character Only</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput required placeholder="Last name" type="text" formControlName="lastname" />
+              <mat-error *ngIf="personform.value.lastname">Please Enter Character Only</mat-error>
+            </mat-form-field>
+
+            <div class="col-md-4"></div>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Date Of Birth</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="DateOfBirth" />
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Gender</mat-label>
+              <mat-select formControlName="Gender">
+                <mat-option *ngFor="let val of gender" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="Address" formControlName="Address" />
+            </mat-form-field>
+
+            <div class="col-md-4"></div>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Phone Number</mat-label>
+              <input matInput required placeholder="Phone Number" formControlName="PhoneNumber" />
+              <mat-error *ngIf="personform.value.PhoneNumber">Please Enter Number Only</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput required placeholder="Email" type="email" formControlName="Email" />
+              <mat-error *ngIf="personform.value.Email">Please Enter Valid Email</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Nationality</mat-label>
+              <mat-select formControlName="Nationality">
+                <mat-option *ngFor="let val of nationalities" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; align-items: center">
+            <a
+              [routerLink]="['/dashboard']"
+              class="btn btn-primary btn-md"
+              style="background: #6e50e3; padding: 10px 58px; color: #fff; margin: 0 20px"
+            >
+              Cancel
+            </a>
+
+            <button [disabled]="personform.invalid" mat-raised-button color="primary" style="padding: 3px 58px" matStepperNext>Next</button>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="kycform" label="KYC Verification">
+      <div formGroupName="kycverify">
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Identification Document</mat-label>
+              <mat-select formControlName="IdentificationDocument">
+                <mat-option *ngFor="let val of IdentificationDocuments" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Identification Document Number</mat-label>
+              <input matInput required formControlName="IdentificationDocumentNumber" placeholder="Identification Document Number" />
+              <mat-error *ngIf="kycform.value.IdentificationDocumentNumber">Please Enter Number Only</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Issuing Country</mat-label>
+              <mat-select formControlName="IssuingCountry">
+                <mat-option *ngFor="let val of IssuingCountries" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Issue Date</mat-label>
+              <input matInput [matDatepicker]="picker1" formControlName="IssueDate" />
+              <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Expiry Date</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="ExpiryDate" />
+              <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <h5 style="color: #5e3dde">KYC Details</h5>
+        <hr />
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>KYC Status</mat-label>
+              <mat-select formControlName="KYCStatus">
+                <mat-option *ngFor="let val of KYCStatuses" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>KYC Verification Date</mat-label>
+              <input matInput [matDatepicker]="picker3" formControlName="KYCVerificationDate" />
+              <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Verification Officer</mat-label>
+              <mat-select formControlName="VerificationOfficer">
+                <mat-option *ngFor="let val of verificationOfficers" [value]="val">{{ val }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Verification Remarks</mat-label>
+              <input matInput required formControlName="VerificationRemarks" placeholder="Verification Remarks" />
+              <mat-error *ngIf="kycform.value.VerificationRemarks">Please Enter Character Only</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+          <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+          <button [disabled]="kycform.invalid" mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperNext>
+            Next
+          </button>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="bankform" label="Bank Details">
+      <div formGroupName="bankdetails">
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Bank Account Number</mat-label>
+              <input matInput required formControlName="BankAccountNumber" placeholder="Bank Account Number" />
+              <mat-error *ngIf="bankform.value.BankAccountNumber">Please Enter Number Only</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Account Holder Name</mat-label>
+              <input matInput required formControlName="AccountHolderName" placeholder="Account Holder Name" />
+              <mat-error *ngIf="bankform.value.AccountHolderName">Please Enter Character Only</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Sort Code</mat-label>
+              <input matInput required formControlName="SortCode" placeholder="Sort Code" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Bank Name</mat-label>
+              <input matInput required formControlName="Bank" placeholder="City" />
+              <mat-error *ngIf="bankform.value.AccountHolderName">Please Enter Character Only</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+          <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+          <button
+            [disabled]="bankform.invalid"
+            mat-raised-button
+            color="accent"
+            style="margin: 0 20px; padding: 3px 58px"
+            (click)="HandleSubmit()"
+          >
+            Proceed
+          </button>
+        </div>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</form>

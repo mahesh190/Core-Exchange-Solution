@@ -1,0 +1,53 @@
+<div id="confirm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5" style="width: 100vw">
+        <div class="message-box _success">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+          <h2>Success!</h2>
+          <p id="fisrtp">Customer has been onboarded successfully</p>
+          <p style="margin-top: -21px; color: #727b80">
+            We have sent your Customer ID & Password on registered email address -
+            <span style="color: #000; font-size: 15px">{{ lastItem.persnalDetails.Email }}</span>
+          </p>
+          <form style="background: #f4f4fe">
+            <div class="row" style="padding: 12px 0">
+              <div class="form-group col-md-3">
+                <label for="inputEmail4">Customer ID</label>
+                <p>{{ lastItem.id }}</p>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Customer Name</label>
+                <p>{{ lastItem.persnalDetails.firstname }} {{ lastItem.persnalDetails.lastname }}</p>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Phone Number</label>
+                <p>{{ lastItem.persnalDetails.PhoneNumber }}</p>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Identification Documents</label>
+                <p>{{ lastItem.kycverify.IdentificationDocument }}</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin: 0px 0; padding: 22px 0">
+              <div class="form-group col-md-3">
+                <label for="inputEmail4">Identification Document Number</label>
+                <p>{{ lastItem.kycverify.IdentificationDocumentNumber }}</p>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Issuing Country</label>
+                <p>{{ lastItem.kycverify.IssuingCountry }}</p>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">KYC Status</label>
+                <p>{{ lastItem.kycverify.KYCStatus }}</p>
+              </div>
+            </div>
+          </form>
+          <a [routerLink]="['/dashboard']" class="btn btn-primary" style="background: #6e50e3; padding: 8px 46px; margin: 6px 0">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

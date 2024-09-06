@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="row" style="padding: 20px">
+      <div class="col-md-6">
+        <h3>Remittance Dashboard</h3>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="card" style="padding:20px">
+  
+    <div class="row">
+   
+      <div class="col-sm-12">
+     <div class="card-title" style="padding: 20px;letter-spacing: 1px;">Overview of all remittance activities, including recent transactions, pending transfers, 
+        and key metrics</div>
+          <apx-chart
+            [dataLabels]="line3CAC.dataLabels!"
+            [chart]="line3CAC.chart!"
+            [stroke]="line3CAC.stroke!"
+            [colors]="line3CAC.colors!"
+            [series]="line3CAC.series!"
+            [title]="line3CAC.title!"
+            [markers]="line3CAC.markers!"
+            [tooltip]="line3CAC.tooltip!"
+            [grid]="line3CAC.grid!"
+            [xaxis]="line3CAC.xaxis!"
+          ></apx-chart>
+      </div>
+     
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,118 @@
+<div id="confiDIV">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Confirmation</h3>
+    </div>
+  </div>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step() === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">Basic Details</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">What type of business you do?</label>
+            <p>{{ lastItem.basicDetails.typebusiness }}</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Product you want to enroll</label>
+            <p>{{ lastItem.basicDetails.enrollprods }}</p>
+          </div>
+        </div>
+      </form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">
+          Business Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">What is your business type?</label>
+              <p>{{ lastItem.businessfm.bustypes }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">In which region your company operates?</label>
+              <p>{{ lastItem.businessfm.compnyoper }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">What is the jurisdiction of establishment?</label>
+              <p>{{ lastItem.businessfm.juriesta }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">What is your FATCA classification?</label>
+              <p>{{ lastItem.businessfm.fatcaclass }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <label for="inputEmail4">Are you CRS reportable?</label>
+              <p>{{ lastItem.businessfm.crsreport }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step() === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">
+          Company Information
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form>
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="inputEmail4">Registration Number</label>
+            <p>{{ lastItem.companyFormdetails.RegistrationNumber }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Name of Legal Entity</label>
+            <p>{{ lastItem.companyFormdetails.NameofLegalEntity }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Representative Name</label>
+            <p>{{ lastItem.companyFormdetails.RepresentativeName }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Designation of Representative</label>
+            <p>{{ lastItem.companyFormdetails.DesignationofRepresentative }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="inputEmail4">Email ID</label>
+            <p>{{ lastItem.companyFormdetails.EmailID }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Country</label>
+            <p>{{ lastItem.companyFormdetails.Country }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Contact Number</label>
+            <p>
+              <span>+</span>
+              {{ lastItem.companyFormdetails.stdCode }} {{ lastItem.companyFormdetails.ContactNumber }}
+            </p>
+          </div>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="display: flex; justify-content: flex-end; align-items: center">
+    <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+    <button mat-raised-button color="accent" style="margin: 0 20px; padding: 3px 58px" (click)="confirm()">Confirm</button>
+  </div>
+</div>

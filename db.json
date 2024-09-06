@@ -1,0 +1,1072 @@
+{
+  "users": [
+    {
+      "data": {
+        "Username": "ram",
+        "Password": "78",
+        "Role": "Teller",
+        "AccountStatus": "Active"
+      },
+      "userid": 179,
+      "id": "0100",
+      "lastlogin": ""
+    },
+    {
+      "data": {
+        "Username": "sam",
+        "Password": "1899",
+        "Role": "Teller",
+        "AccountStatus": "Active"
+      },
+      "userid": 413,
+      "id": "0e96",
+      "lastlogin": ""
+    },
+    {
+      "data": {
+        "Username": "abc",
+        "Password": "145",
+        "Role": "Admin",
+        "AccountStatus": "Active"
+      },
+      "userid": 798,
+      "id": "f9d2",
+      "lastlogin": ""
+    },
+    {
+      "id": "9546",
+      "data": {
+        "Username": "Test",
+        "Password": "127",
+        "Role": "Teller",
+        "AccountStatus": "Locked"
+      },
+      "userid": 525,
+      "lastlogin": ""
+    },
+    {
+      "id": "ebe4",
+      "data": {
+        "Username": "Om",
+        "Password": "178",
+        "Role": "Teller",
+        "AccountStatus": "Locked"
+      },
+      "userid": 831
+    },
+    {
+      "id": "ddfb",
+      "data": {
+        "Username": "Ashish",
+        "Password": "178",
+        "Role": "Teller",
+        "AccountStatus": "Locked"
+      },
+      "userid": 674,
+      "lastlogin": "11:56:50 AM"
+    }
+  ],
+  "employees": [
+    {
+      "FirstName": "yur12",
+      "LastName": "ew",
+      "DateOfBirth": "2024-08-13T18:30:00.000Z",
+      "Gender": "Female",
+      "Address": "ewewe",
+      "PhoneNumber": null,
+      "Email": "3ss",
+      "Nationality": "sww",
+      "IdentificationType": "dee",
+      "IdentificationNumber": null,
+      "IssuingCountry": "4ffe",
+      "IssueDate": "2024-08-26T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z",
+      "id": "07c0"
+    },
+    {
+      "id": "37a3",
+      "FirstName": "",
+      "LastName": "",
+      "DateOfBirth": "",
+      "Gender": "",
+      "Address": "",
+      "PhoneNumber": "",
+      "Email": "sasasas",
+      "Nationality": "",
+      "IdentificationType": "",
+      "IdentificationNumber": "",
+      "IssuingCountry": "",
+      "IssueDate": "",
+      "ExpiryDate": ""
+    },
+    {
+      "id": "71fe",
+      "FirstName": "d",
+      "LastName": "",
+      "DateOfBirth": "",
+      "Gender": "",
+      "Address": "",
+      "PhoneNumber": "",
+      "Email": "",
+      "Nationality": "",
+      "IdentificationType": "",
+      "IdentificationNumber": "",
+      "IssuingCountry": "",
+      "IssueDate": "",
+      "ExpiryDate": ""
+    },
+    {
+      "FirstName": "test 122",
+      "LastName": "test1",
+      "DateOfBirth": "2024-08-15T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "er",
+      "PhoneNumber": 9090,
+      "Email": "test@r",
+      "Nationality": "in",
+      "IdentificationType": "rf",
+      "IdentificationNumber": 12,
+      "IssuingCountry": "io",
+      "IssueDate": "2024-08-28T18:30:00.000Z",
+      "ExpiryDate": "2024-08-28T18:30:00.000Z",
+      "id": "66bc"
+    },
+    {
+      "FirstName": "test12",
+      "LastName": "ui",
+      "DateOfBirth": "2024-08-15T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "ER",
+      "PhoneNumber": 21,
+      "Email": "te@tes",
+      "Nationality": "ws",
+      "IdentificationType": "rr",
+      "IdentificationNumber": 12,
+      "IssuingCountry": "rt",
+      "IssueDate": "2024-08-27T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z",
+      "id": "2d9c"
+    },
+    {
+      "id": "1154",
+      "FirstName": "test12",
+      "LastName": "ui",
+      "DateOfBirth": "2024-08-15T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "ER",
+      "PhoneNumber": 21,
+      "Email": "te@tes.com",
+      "Nationality": "ws",
+      "IdentificationType": "rr",
+      "IdentificationNumber": 12,
+      "IssuingCountry": "rt",
+      "IssueDate": "2024-08-27T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z"
+    },
+    {
+      "id": "2698",
+      "FirstName": "test12",
+      "LastName": "ui",
+      "DateOfBirth": "2024-08-15T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "ER",
+      "PhoneNumber": 21,
+      "Email": "te@tes",
+      "Nationality": "ws",
+      "IdentificationType": "rr",
+      "IdentificationNumber": 12,
+      "IssuingCountry": "rt",
+      "IssueDate": "2024-08-27T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z"
+    },
+    {
+      "id": "5b47",
+      "FirstName": "test12",
+      "LastName": "ui",
+      "DateOfBirth": "2024-08-15T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "ER",
+      "PhoneNumber": 21,
+      "Email": "te@tes",
+      "Nationality": "ws",
+      "IdentificationType": "rr",
+      "IdentificationNumber": 12,
+      "IssuingCountry": "rt",
+      "IssueDate": "2024-08-27T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z"
+    },
+    {
+      "id": "897c",
+      "FirstName": "dd",
+      "LastName": "dwd",
+      "DateOfBirth": "2024-08-13T18:30:00.000Z",
+      "Gender": "Male",
+      "Address": "ddd",
+      "PhoneNumber": 4343,
+      "Email": "4242@dsd.com",
+      "Nationality": "dd",
+      "IdentificationType": "dsd",
+      "IdentificationNumber": 323,
+      "IssuingCountry": "3232",
+      "IssueDate": "2024-08-26T18:30:00.000Z",
+      "ExpiryDate": ""
+    },
+    {
+      "id": "07c8",
+      "FirstName": "xcsd",
+      "LastName": "sdsd",
+      "DateOfBirth": "2024-08-19T18:30:00.000Z",
+      "Gender": "Female",
+      "Address": "dsd",
+      "PhoneNumber": 212,
+      "Email": "e2SA@D",
+      "Nationality": "CXC",
+      "IdentificationType": "DSDS",
+      "IdentificationNumber": 212,
+      "IssuingCountry": "DSD",
+      "IssueDate": "2024-08-28T18:30:00.000Z",
+      "ExpiryDate": "2024-08-29T18:30:00.000Z"
+    }
+  ],
+  "kycemployees": [
+    {
+      "CustomerID": "07c0",
+      "KYCStatus": "test2",
+      "KYCVerificationDate": "2024-08-13T18:30:00.000Z",
+      "VerificationOfficer": "testa",
+      "VerificationRemarks": "ok",
+      "id": "9ec8"
+    },
+    {
+      "id": "8703",
+      "CustomerID": "37a3",
+      "KYCStatus": "twst",
+      "KYCVerificationDate": "2024-08-17T18:30:00.000Z",
+      "VerificationOfficer": "re",
+      "VerificationRemarks": "s"
+    },
+    {
+      "id": "20bd",
+      "CustomerID": "37a3",
+      "KYCStatus": "twst",
+      "KYCVerificationDate": "2024-08-17T18:30:00.000Z",
+      "VerificationOfficer": "re",
+      "VerificationRemarks": "s"
+    },
+    {
+      "id": "e8e7",
+      "CustomerID": "37a3",
+      "KYCStatus": "twst",
+      "KYCVerificationDate": "2024-08-17T18:30:00.000Z",
+      "VerificationOfficer": "re",
+      "VerificationRemarks": "s"
+    },
+    {
+      "id": "270e",
+      "CustomerID": "71fe",
+      "KYCStatus": "ok",
+      "KYCVerificationDate": "2024-08-21T18:30:00.000Z",
+      "VerificationOfficer": "io",
+      "VerificationRemarks": "pp"
+    },
+    {
+      "id": "7b82",
+      "CustomerID": "2d9c",
+      "KYCStatus": "test",
+      "KYCVerificationDate": "2024-08-21T18:30:00.000Z",
+      "VerificationOfficer": "op",
+      "VerificationRemarks": "kop"
+    }
+  ],
+  "financeReport": [
+    {
+      "id": "64f7",
+      "data": {
+        "ReportType": "Income Statement",
+        "ReportPeriod": "2024-08-17T18:30:00.000Z",
+        "GeneratedBy": "sam",
+        "GeneratedDate": "2024-08-28T18:30:00.000Z",
+        "ReportStatus": "Verify",
+        "Remarks": "Ok",
+        "Revenue": "1900",
+        "Expense": "100",
+        "ProfitLoss": "Profit"
+      },
+      "ReportID": 359
+    },
+    {
+      "id": "26fc",
+      "data": {
+        "ReportType": "Balance Sheet",
+        "ReportPeriod": "2024-08-22T18:30:00.000Z",
+        "GeneratedBy": "abc",
+        "GeneratedDate": "2024-08-19T18:30:00.000Z",
+        "ReportStatus": "Null",
+        "Remarks": "OK",
+        "Revenue": "890",
+        "Expense": "66",
+        "ProfitLoss": "Profit"
+      },
+      "ReportID": 440
+    }
+  ],
+  "complianceReport": [
+    {
+      "id": "b4cc",
+      "data": {
+        "ReportType": "AML Report",
+        "GeneratedBy": "sam",
+        "GeneratedDate": "2024-08-21T18:30:00.000Z",
+        "ReportStatus": "ok",
+        "Remarks": "Verified",
+        "AMLStatus": "Verified",
+        "KYCStatus": "No",
+        "SARFiled": "Yes"
+      },
+      "ReportID": 965
+    },
+    {
+      "id": "f68c",
+      "data": {
+        "ReportType": "Internal",
+        "GeneratedBy": "abc",
+        "GeneratedDate": "2024-08-21T18:30:00.000Z",
+        "ReportStatus": "Clear",
+        "Remarks": "No",
+        "AMLStatus": "Verify",
+        "KYCStatus": "Done",
+        "SARFiled": "yes"
+      },
+      "ReportID": 365
+    },
+    {
+      "id": "e324",
+      "data": {
+        "ReportedBy": "sam",
+        "IncidentType": "Fraud",
+        "Description": "Test",
+        "ReportedDate": "2024-08-20T18:30:00.000Z",
+        "Status": "ok",
+        "ResolutionDetails": "test on"
+      },
+      "ReportID": 249
+    }
+  ],
+  "incidentManagment": [
+    {
+      "id": "82e9",
+      "data": {
+        "ReportedBy": "sam",
+        "IncidentType": "Fraud",
+        "Description": "Test",
+        "ReportedDate": "2024-08-27T18:30:00.000Z",
+        "Status": "Verify",
+        "ResolutionDetails": "Test On"
+      },
+      "IncidentID": 318
+    },
+    {
+      "data": {
+        "ReportedBy": "sam",
+        "IncidentType": "Data Breach",
+        "Description": "Test 1899",
+        "ReportedDate": "2024-08-29T18:30:00.000Z",
+        "Status": "Verify",
+        "ResolutionDetails": "test on"
+      },
+      "IncidentID": 778,
+      "id": "f251"
+    }
+  ],
+  "currencyexchange": [
+    {
+      "id": "d29d",
+      "data": {
+        "CustomerID": "2d9c",
+        "FromCurrency": "USD",
+        "ToCurrency": "INR",
+        "ExchangeRate": "545",
+        "Amount": "757"
+      },
+      "TransactionID": 335,
+      "TransactionDate": "2024-08-19",
+      "ExchangeFee": 100
+    },
+    {
+      "id": "2032",
+      "data": {
+        "CustomerID": "37a3",
+        "FromCurrency": "USD",
+        "ToCurrency": "INR",
+        "ExchangeRate": 100,
+        "Amount": 122
+      },
+      "TransactionID": 838,
+      "TransactionDate": "2024-08-20",
+      "ExchangeFee": 100
+    },
+    {
+      "id": "c553",
+      "data": {
+        "CustomerID": "37a3",
+        "FromCurrency": "AFN",
+        "ToCurrency": "AMD",
+        "ExchangeRate": 388.3,
+        "Amount": 45
+      },
+      "TransactionID": 746,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 0.9
+    },
+    {
+      "id": "ac97",
+      "data": {
+        "CustomerID": "66bc",
+        "FromCurrency": "AED",
+        "ToCurrency": "ALL",
+        "ExchangeRate": 89.92,
+        "Amount": 0
+      },
+      "TransactionID": 551,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 0
+    },
+    {
+      "id": "c3cc",
+      "data": {
+        "CustomerID": "66bc",
+        "FromCurrency": "AFN",
+        "ToCurrency": "AMD",
+        "ExchangeRate": 23,
+        "Amount": 21212
+      },
+      "TransactionID": 69,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 424.24
+    },
+    {
+      "id": "ec69",
+      "data": {
+        "CustomerID": "71fe",
+        "FromCurrency": "AED",
+        "ToCurrency": "AMD",
+        "ExchangeRate": 388.3,
+        "Amount": 88
+      },
+      "TransactionID": 427,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 1.76
+    },
+    {
+      "id": "6277",
+      "data": {
+        "CustomerID": "37a3",
+        "FromCurrency": "AFN",
+        "ToCurrency": "AMD",
+        "ExchangeRate": 388.3,
+        "Amount": 68
+      },
+      "TransactionID": 275,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 1.36
+    },
+    {
+      "id": "1d9b",
+      "data": {
+        "CustomerID": "71fe",
+        "FromCurrency": "CZK",
+        "ToCurrency": "AWG",
+        "ExchangeRate": 1.79,
+        "Amount": 45
+      },
+      "TransactionID": 654,
+      "TransactionDate": "2024-08-21",
+      "ExchangeFee": 0.9
+    }
+  ],
+  "branchdetails": [
+    {
+      "data": {
+        "BranchName": "Branch1",
+        "TransactionsCount": 9000,
+        "TotalAmountExchanged": 898,
+        "TotalRemittances": 66,
+        "RevenueGenerated": 45
+      },
+      "BranchID": 81,
+      "id": "acad"
+    }
+  ],
+  "notification": [
+    {
+      "data": {
+        "UserID": "1",
+        "Message": "Ok",
+        "NotificationDate": "",
+        "Status": "Verify"
+      },
+      "NotificationID": 1,
+      "id": "1"
+    }
+  ],
+  "remittance": [
+    {
+      "data": {
+        "CustomerID": "1",
+        "BeneficiaryName": "",
+        "BeneficiaryBank": "",
+        "BeneficiaryAccount": "",
+        "FromCurrency": "",
+        "ToCurrency": "",
+        "Amount": "",
+        "ExchangeRate": "",
+        "TransactionDate": "",
+        "RemittanceFee": ""
+      },
+      "RemittanceID": 1,
+      "id": "1"
+    }
+  ],
+  "retailCustomer": [
+    {
+      "id": "8737",
+      "fullname": "vivek",
+      "persnalDetails": {
+        "firstname": "Vivek",
+        "lastname": "Kumar",
+        "DateOfBirth": "8-9-2000",
+        "Gender": "male",
+        "Address": "US",
+        "PhoneNumber": "9087788",
+        "Email": "vi@test.com",
+        "Nationality": "US"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "9989898",
+        "IssuingCountry": "us",
+        "IssueDate": "9-10-2022",
+        "ExpiryDate": "9-2-2024",
+        "KYCStatus": "nil",
+        "KYCVerificationDate": "9-10-2023",
+        "VerificationOfficer": "ABC",
+        "VerificationRemarks": "OK"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "66522",
+        "AccountHolderName": "Vivek",
+        "SortCode": "90980",
+        "Bank": "PO"
+      }
+    },
+    {
+      "id": "73ff",
+      "fullname": "mahesh badgujar",
+      "persnalDetails": {
+        "firstname": "ValidationFie",
+        "lastname": "ss",
+        "DateOfBirth": "2024-08-14T18:30:00.000Z",
+        "Gender": "Female",
+        "Address": "IKKK",
+        "PhoneNumber": "21212",
+        "Email": "dd@dsd.com",
+        "Nationality": "yesy"
+      },
+      "kycverify": {
+        "IdentificationDocument": "wdwdd",
+        "IdentificationDocumentNumber": "32",
+        "IssuingCountry": "dwdw",
+        "IssueDate": "2024-08-22T18:30:00.000Z",
+        "ExpiryDate": "2024-08-28T18:30:00.000Z",
+        "KYCStatus": "ewewe",
+        "KYCVerificationDate": "2024-08-29T18:30:00.000Z",
+        "VerificationOfficer": "ewewe",
+        "VerificationRemarks": "eew"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "133444",
+        "AccountHolderName": "op",
+        "SortCode": "11233",
+        "Bank": "wFR"
+      }
+    },
+    {
+      "id": "0cb7",
+      "persnalDetails": {
+        "firstname": "suresh",
+        "lastname": "annna",
+        "DateOfBirth": "2024-08-01T18:30:00.000Z",
+        "Gender": "Male",
+        "Address": "32",
+        "PhoneNumber": "455666",
+        "Email": "suresh@test.com",
+        "Nationality": "USA"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "456",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-28T18:30:00.000Z",
+        "ExpiryDate": "2024-08-29T18:30:00.000Z",
+        "KYCStatus": "Other",
+        "KYCVerificationDate": "2024-08-29T18:30:00.000Z",
+        "VerificationOfficer": "Guest",
+        "VerificationRemarks": "nil"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "56789",
+        "AccountHolderName": "Suresh",
+        "SortCode": "89008888888",
+        "Bank": "ABC"
+      }
+    },
+    {
+      "id": "995e",
+      "persnalDetails": {
+        "firstname": "MUKESH",
+        "lastname": "Kumar",
+        "DateOfBirth": "2024-08-13T18:30:00.000Z",
+        "Gender": "Male",
+        "Address": "dsdsd",
+        "PhoneNumber": "3232",
+        "Email": "dwd@dsd.com",
+        "Nationality": "IND"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "323",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-29T18:30:00.000Z",
+        "ExpiryDate": "2024-08-30T18:30:00.000Z",
+        "KYCStatus": "Completed",
+        "KYCVerificationDate": "2024-08-27T18:30:00.000Z",
+        "VerificationOfficer": "Guest",
+        "VerificationRemarks": "dwdw"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "3232",
+        "AccountHolderName": "ewew",
+        "SortCode": "323232323232",
+        "Bank": "ewewew"
+      }
+    },
+    {
+      "id": "3aa9",
+      "persnalDetails": {
+        "firstname": "Ramesh",
+        "lastname": "Kumar",
+        "DateOfBirth": "2024-08-15T18:30:00.000Z",
+        "Gender": "Male",
+        "Address": "USA",
+        "PhoneNumber": "97878",
+        "Email": "ramesh@test.com",
+        "Nationality": "USA"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "1245",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-30T18:30:00.000Z",
+        "ExpiryDate": "2024-08-15T18:30:00.000Z",
+        "KYCStatus": "Verify",
+        "KYCVerificationDate": "2024-08-30T18:30:00.000Z",
+        "VerificationOfficer": "Guest",
+        "VerificationRemarks": "VERIFY"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "5644",
+        "AccountHolderName": "RAMESHPradhan",
+        "SortCode": "656656567676",
+        "Bank": "sdddsddsdsd"
+      }
+    },
+    {
+      "id": "824e",
+      "persnalDetails": {
+        "firstname": "Rakesh Kumar",
+        "lastname": "Patil",
+        "DateOfBirth": "2024-08-06T18:30:00.000Z",
+        "Gender": "Female",
+        "Address": "Uk Canada Road No -2",
+        "PhoneNumber": "3232",
+        "Email": "21wW@dd.com",
+        "Nationality": "IND"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "332323",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-30T18:30:00.000Z",
+        "ExpiryDate": "2024-08-28T18:30:00.000Z",
+        "KYCStatus": "Verify",
+        "KYCVerificationDate": "2024-08-30T18:30:00.000Z",
+        "VerificationOfficer": "Guest",
+        "VerificationRemarks": "Verify Passport"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "332323",
+        "AccountHolderName": "Kumar Patil",
+        "SortCode": "8887666999",
+        "Bank": "AOC Bank"
+      }
+    },
+    {
+      "id": "2b09",
+      "persnalDetails": {
+        "firstname": "Ddd",
+        "lastname": "ds",
+        "DateOfBirth": "2024-08-07T18:30:00.000Z",
+        "Gender": "Female",
+        "Address": "dsd",
+        "PhoneNumber": "332",
+        "Email": "as2@SS.COM",
+        "Nationality": "USA"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "434",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-09T18:30:00.000Z",
+        "ExpiryDate": "2024-08-30T18:30:00.000Z",
+        "KYCStatus": "Verify",
+        "KYCVerificationDate": "2024-08-30T18:30:00.000Z",
+        "VerificationOfficer": "Other",
+        "VerificationRemarks": "dsd"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "2323",
+        "AccountHolderName": "ffdf",
+        "SortCode": "323232323323",
+        "Bank": "ewe"
+      }
+    },
+    {
+      "id": "ba46",
+      "persnalDetails": {
+        "firstname": "dsdsd",
+        "lastname": "dsdsds",
+        "DateOfBirth": "2024-08-14T18:30:00.000Z",
+        "Gender": "Female",
+        "Address": "dsdsd",
+        "PhoneNumber": "3232",
+        "Email": "ewe2DSDSD@CC.OI",
+        "Nationality": "USA"
+      },
+      "kycverify": {
+        "IdentificationDocument": "Passport",
+        "IdentificationDocumentNumber": "42434",
+        "IssuingCountry": "USA",
+        "IssueDate": "2024-08-30T18:30:00.000Z",
+        "ExpiryDate": "2024-08-30T18:30:00.000Z",
+        "KYCStatus": "Verify",
+        "KYCVerificationDate": "2024-08-29T18:30:00.000Z",
+        "VerificationOfficer": "Guest",
+        "VerificationRemarks": "DSDSD"
+      },
+      "bankdetails": {
+        "BankAccountNumber": "43434",
+        "AccountHolderName": "DFDFDFDF",
+        "SortCode": "4343434344",
+        "Bank": "REWR"
+      }
+    }
+  ],
+  "corporateCustomer": [
+    {
+      "id": "1",
+      "basicDetails": {
+        "typebusiness": "",
+        "enrollprods": ""
+      },
+      "businessfm": {
+        "bustypes": "",
+        "compnyoper": "",
+        "juriesta": "",
+        "fatcaclass": "",
+        "crsreport": ""
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "",
+        "NameofLegalEntity": "",
+        "RepresentativeName": "",
+        "DesignationofRepresentative": "",
+        "EmailID": "",
+        "Country": "",
+        "stdCode": "",
+        "ContactNumber": ""
+      }
+    },
+    {
+      "id": "7e40",
+      "basicDetails": {
+        "typebusiness": "A",
+        "enrollprods": "B1"
+      },
+      "businessfm": {
+        "bustypes": "A1",
+        "compnyoper": "B1",
+        "juriesta": "C1",
+        "fatcaclass": "B1",
+        "crsreport": "A1"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "1456",
+        "NameofLegalEntity": "rdw",
+        "RepresentativeName": "corporatecustomer",
+        "DesignationofRepresentative": "teller",
+        "EmailID": "cor@text.com",
+        "Country": "B1",
+        "stdCode": "92",
+        "ContactNumber": "908898"
+      }
+    },
+    {
+      "id": "ca04",
+      "basicDetails": {
+        "typebusiness": "B",
+        "enrollprods": "B1"
+      },
+      "businessfm": {
+        "bustypes": "C1",
+        "compnyoper": "B1",
+        "juriesta": "C1",
+        "fatcaclass": "B1",
+        "crsreport": "B1"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "98909",
+        "NameofLegalEntity": "CORPORATECUSTOMERSSS",
+        "RepresentativeName": "SAM",
+        "DesignationofRepresentative": "ADMIN",
+        "EmailID": "sam@yahoo.com",
+        "Country": "B1",
+        "stdCode": "93",
+        "ContactNumber": "90989890"
+      }
+    },
+    {
+      "id": "e03c",
+      "basicDetails": {
+        "typebusiness": "B",
+        "enrollprods": "C1"
+      },
+      "businessfm": {
+        "bustypes": "B1",
+        "compnyoper": "C1",
+        "juriesta": "B1",
+        "fatcaclass": "B1",
+        "crsreport": "B1"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "212",
+        "NameofLegalEntity": "Confirms",
+        "RepresentativeName": "ALVIN",
+        "DesignationofRepresentative": "GUEST",
+        "EmailID": "guest@mail.com",
+        "Country": "B1",
+        "stdCode": "92",
+        "ContactNumber": "908989"
+      }
+    },
+    {
+      "id": "3668",
+      "basicDetails": {
+        "typebusiness": "C",
+        "enrollprods": "C1"
+      },
+      "businessfm": {
+        "bustypes": "C1",
+        "compnyoper": "C1",
+        "juriesta": "B1",
+        "fatcaclass": "B1",
+        "crsreport": "B1"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "21212",
+        "NameofLegalEntity": "tesrssasa",
+        "RepresentativeName": "sasas",
+        "DesignationofRepresentative": "sas",
+        "EmailID": "sas@dsd.com",
+        "Country": "B1",
+        "stdCode": "92",
+        "ContactNumber": "2121"
+      }
+    },
+    {
+      "id": "a036",
+      "basicDetails": {
+        "typebusiness": "Financial",
+        "enrollprods": "Business Insurance"
+      },
+      "businessfm": {
+        "bustypes": "Finance Insurance",
+        "compnyoper": "Chennai",
+        "juriesta": "BAModel1GA",
+        "fatcaclass": "No",
+        "crsreport": "Verify"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "89897",
+        "NameofLegalEntity": "PassportVerification",
+        "RepresentativeName": "Praful",
+        "DesignationofRepresentative": "HOD",
+        "EmailID": "praful@testc.com",
+        "Country": "CANADA",
+        "stdCode": "91",
+        "ContactNumber": "9090654425"
+      }
+    },
+    {
+      "id": "c3e5",
+      "basicDetails": {
+        "typebusiness": "Insurance",
+        "enrollprods": "Business Insurance"
+      },
+      "businessfm": {
+        "bustypes": "Others",
+        "compnyoper": "Chennai",
+        "juriesta": "Model1GA",
+        "fatcaclass": "Null",
+        "crsreport": "Not Verify"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "122255",
+        "NameofLegalEntity": "Verification Number",
+        "RepresentativeName": "MAhesh Jadhav",
+        "DesignationofRepresentative": "Admin",
+        "EmailID": "TY#ddd23@fail.co",
+        "Country": "CANADA",
+        "stdCode": "91",
+        "ContactNumber": "8900099"
+      }
+    },
+    {
+      "id": "e934",
+      "basicDetails": {
+        "typebusiness": "Others",
+        "enrollprods": "Business Insurance"
+      },
+      "businessfm": {
+        "bustypes": "Others",
+        "compnyoper": "Other",
+        "juriesta": "BAModel1GA",
+        "fatcaclass": "Null",
+        "crsreport": "Others"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "1255",
+        "NameofLegalEntity": "Passport",
+        "RepresentativeName": "Rahul",
+        "DesignationofRepresentative": "HOD",
+        "EmailID": "Ragul@test.com",
+        "Country": "CANADA",
+        "stdCode": "92",
+        "ContactNumber": "55454545"
+      }
+    },
+    {
+      "id": "2c87",
+      "basicDetails": {
+        "typebusiness": "Insurance",
+        "enrollprods": "Business Insurance"
+      },
+      "businessfm": {
+        "bustypes": "Finance Insurance",
+        "compnyoper": "Chennai",
+        "juriesta": "BAModel1GA",
+        "fatcaclass": "Yes",
+        "crsreport": "Verify"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "1246",
+        "NameofLegalEntity": "Passport",
+        "RepresentativeName": "Umesh",
+        "DesignationofRepresentative": "ADMIN",
+        "EmailID": "rahul#12@yahoo.com",
+        "Country": "CANADA",
+        "stdCode": "91",
+        "ContactNumber": "9098654899"
+      }
+    },
+    {
+      "id": "bbbc",
+      "basicDetails": {
+        "typebusiness": "Others",
+        "enrollprods": "Business Insurance"
+      },
+      "businessfm": {
+        "bustypes": "Others",
+        "compnyoper": "Other",
+        "juriesta": "BAModel1GA",
+        "fatcaclass": "No",
+        "crsreport": "Not Verify"
+      },
+      "companyFormdetails": {
+        "RegistrationNumber": "331",
+        "NameofLegalEntity": "ew",
+        "RepresentativeName": "ewew",
+        "DesignationofRepresentative": "ewew",
+        "EmailID": "ew@fd.com",
+        "Country": "CANADA",
+        "stdCode": "91",
+        "ContactNumber": "87878678"
+      }
+    }
+  ],
+  "RemittanceInitiation": [
+    {
+      "id": "3844",
+      "SenderID": "dd",
+      "ReceiverID": "eew",
+      "Currency": "BEL",
+      "Amount": "55353",
+      "ExchangeRate": "212.323",
+      "RemittanceMethod": "dwd",
+      "Fees": "232",
+      "TotalAmount": "3232",
+      "PaymentMethod": "dwdew",
+      "documentsText": "pan card.png"
+    },
+    {
+      "SenderID": "Rahul",
+      "ReceiverID": "Soham",
+      "Currency": "RUS",
+      "Amount": "66666",
+      "ExchangeRate": "899.211",
+      "RemittanceMethod": "online",
+      "Fees": "7899",
+      "TotalAmount": "78888",
+      "PaymentMethod": "Prepaid",
+      "documentsText": "aadhar card.png",
+      "id": "4eba"
+    },
+    {
+      "id": "1c81",
+      "SenderID": "Sunil",
+      "ReceiverID": "Ramesh",
+      "Currency": "KOR",
+      "Amount": "8999",
+      "ExchangeRate": "899.211",
+      "RemittanceMethod": "transfer Cheque",
+      "Fees": "9090",
+      "TotalAmount": "90909",
+      "PaymentMethod": "Post",
+      "documents": "",
+      "documentsText": "Passport.txt"
+    },
+    {
+      "SenderID": "sender1",
+      "ReceiverID": "iop",
+      "Currency": "usa",
+      "Amount": "8989",
+      "ExchangeRate": "090.212",
+      "RemittanceMethod": "tras",
+      "Fees": "899",
+      "TotalAmount": "667",
+      "PaymentMethod": "ppst",
+      "documents": "",
+      "documentsText": "scss.txt",
+      "id": "51b6"
+    }
+  ]
+}

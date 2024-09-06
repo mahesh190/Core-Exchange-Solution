@@ -1,0 +1,139 @@
+<div class="card">
+  <div class="row" style="padding: 20px">
+    <div class="col-md-6">
+      <h3>Remittance Initiation</h3>
+    </div>
+    <div class="col-md-6" style="display: flex; justify-content: flex-end; align-items: center">
+      <a class="btn btn-primary" style="background-color: #6e50e3" (click)="openAddEditEmpForm()">
+        <i class="fa fa-plus"></i>
+        New Remittance Transaction.
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6" style="line-height: 2;">
+                <!-- <div id="list">List Of Remittance</div> -->
+
+              </div>
+              <div class="col-6" style="    display: flex;
+              justify-content: flex-end;
+              align-items: center;">
+                <mat-form-field>
+                  <!-- <mat-icon>search</mat-icon> -->
+    
+                  <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input />
+                </mat-form-field>
+              </div>
+            </div>
+            
+            <div class="table-responsive" style="height: 60vh;">
+              <div class="main-body">
+              
+
+                <div class="mat-elevation-z8" tabindex="0">
+                  <table mat-table [dataSource]="dataSource" matSort>
+                    <ng-container matColumnDef="SenderID" sticky>
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sender ID</th>
+                      <td mat-cell *matCellDef="let row">{{ row.SenderID }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ReceiverID">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Receiver ID</th>
+                      <td mat-cell *matCellDef="let row">{{ row.ReceiverID }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Amount">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Amount</th>
+                      <td mat-cell *matCellDef="let row">{{ row.Amount }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Currency">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Currency</th>
+                      <td mat-cell *matCellDef="let row">{{ row.Currency }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ExchangeRate">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Exchange Rate</th>
+                      <td mat-cell *matCellDef="let row">{{ row.ExchangeRate }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="RemittanceMethod">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Remittance Method</th>
+                      <td mat-cell *matCellDef="let row">{{ row.RemittanceMethod }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Fees">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fees</th>
+                      <td mat-cell *matCellDef="let row">{{ row.Fees }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="TotalAmount">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Amount</th>
+                      <td mat-cell *matCellDef="let row">{{ row.TotalAmount }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="PaymentMethod">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Payment Method</th>
+                      <td mat-cell *matCellDef="let row">{{ row.PaymentMethod }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="documentsText">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Document Name</th>
+                      <td mat-cell *matCellDef="let row">{{ row.documentsText }}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="action" stickyEnd>
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+                      <td mat-cell *matCellDef="let row">
+                        <button
+                          matTooltip="Edit"
+                          style="margin: 0 12px; background: #24a159"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-success btn-sm rounded-0"
+                          type="button"
+                          (click)="openEditForm(row)"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Edit"
+                        >
+                          <i class="fa fa-edit"></i>
+                        </button>
+
+                        <button
+                          matTooltip="Remove"
+                          style="background: #ff2e2e"
+                          [matTooltipPosition]="'above'"
+                          class="btn btn-danger btn-sm rounded-0"
+                          type="button"
+                          (click)="deleteIncidentDetails(row.id)"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Delete"
+                        >
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+                    <tr class="mat-row" *matNoDataRow>
+                      <td class="mat-cell" colspan="4">No data matching the filter "{{ input.value }}"</td>
+                    </tr>
+                  </table>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div id="currEx">
+  <div class="row" style="margin-bottom: 40px">
+    <div class="col-sm-12">
+      <h3>Currency Exchange</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="container">
+        <form>
+          <label>
+            <input type="radio" id="a" name="sample" value="div1" (change)="onChange($event)" checked />
+            <span>Existing Customer</span>
+          </label>
+          <label>
+            <input type="radio" id="b" name="sample" value="div2" (change)="onChange($event)" />
+
+            <span>Walk - in Customer</span>
+          </label>
+        </form>
+        <div class="text-left purple" *ngIf="visiblediv1">
+          <div class="col-md-6" style="display: flex; justify-content: flex-end; align-items: center">
+            <button (click)="onclick()" class="btn btn-primary btn-md" style="background-color: #6e50e3">Continue</button>
+          </div>
+        </div>
+        <div class="text-left red" *ngIf="visiblediv2">Div 2</div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="visible">
+    <div class="row btn-page">
+      <div class="col-md-6">
+        <app-card cardTitle="Retail Customer" [options]="false">
+          <p>A currency exchange is a licensed business that allows customers to exchange one currency for another.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary btn-md" style="background-color: #6e50e3">Continue</button>
+          </div>
+        </app-card>
+      </div>
+
+      <div class="col-md-6">
+        <app-card cardTitle="Corporate Customer" [options]="false">
+          <p>Secure, fast, and convenient currency exchange for all your business needs. Compare rates and save money today!</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-primary btn-md" style="background: #6e50e3">Continue</button>
+          </div>
+        </app-card>
+      </div>
+      <div class="col-sm-12" style="display: flex; justify-content: flex-end; align-items: flex-start">
+        <a [routerLink]="['/dashboard']" class="btn btn-primary btn-md" style="background: #6e50e3; padding: 10px 58px">Cancel</a>
+      </div>
+      <div class="row"></div>
+      <div class="row"></div>
+    </div>
+  </ng-container>
+</div>

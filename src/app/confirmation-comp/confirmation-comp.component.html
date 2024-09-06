@@ -1,0 +1,142 @@
+<div id="confiDIV">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Confirmation</h3>
+    </div>
+  </div>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step() === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">
+          Personal Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form>
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="inputEmail4">First Name</label>
+            <p>{{ lastItem.persnalDetails.firstname }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Last Name</label>
+            <p>{{ lastItem.persnalDetails.lastname }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Date Of Birth</label>
+            <p>{{ lastItem.persnalDetails.DateOfBirth | date }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Gender</label>
+            <p>{{ lastItem.persnalDetails.Gender }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="inputEmail4">Address</label>
+            <p>{{ lastItem.persnalDetails.Address }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Phone Number</label>
+            <p>{{ lastItem.persnalDetails.PhoneNumber }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Email</label>
+            <p>{{ lastItem.persnalDetails.Email }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Nationality</label>
+            <p>{{ lastItem.persnalDetails.Nationality }}</p>
+          </div>
+        </div>
+      </form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">
+          KYC Verification
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <label for="inputEmail4">KYC Status</label>
+              <p>{{ lastItem.kycverify.KYCStatus }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">KYC Verification Date</label>
+              <p>{{ lastItem.kycverify.KYCVerificationDate | date }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Verification Officer</label>
+              <p>{{ lastItem.kycverify.VerificationOfficer }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Verification Remarks</label>
+              <p>{{ lastItem.kycverify.VerificationRemarks }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-3">
+              <label for="inputEmail4">Identification Document</label>
+              <p>{{ lastItem.kycverify.IdentificationDocument }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Identification Document Number</label>
+              <p>{{ lastItem.kycverify.IdentificationDocumentNumber }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Issuing Country</label>
+              <p>{{ lastItem.kycverify.IssuingCountry }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Issue Date</label>
+              <p>{{ lastItem.kycverify.IssueDate | date }}</p>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputPassword4">Expiry Date</label>
+              <p>{{ lastItem.kycverify.ExpiryDate | date }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step() === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-icon>expand_more</mat-icon>
+        <mat-panel-title style="color: #6539b4; font-weight: bold; font-family: 'Poppins'; font-size: 18px">Bank Details</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form>
+        <div class="row">
+          <div class="form-group col-md-3">
+            <label for="inputEmail4">Bank Account Number</label>
+            <p>{{ lastItem.bankdetails.BankAccountNumber }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Account Holder Name</label>
+            <p>{{ lastItem.bankdetails.AccountHolderName }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Sort Code</label>
+            <p>{{ lastItem.bankdetails.SortCode }}</p>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPassword4">Bank Name</label>
+            <p>{{ lastItem.bankdetails.Bank }}</p>
+          </div>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="display: flex; justify-content: flex-end; align-items: center">
+    <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+    <button mat-raised-button color="accent" style="margin: 0 20px; padding: 3px 58px" (click)="confirm()">Confirm</button>
+  </div>
+</div>

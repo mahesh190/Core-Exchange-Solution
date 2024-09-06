@@ -1,0 +1,58 @@
+#confirm {
+  height: 100vh;
+}
+.container {
+  margin-top: -20px;
+}
+._success {
+  background: #fff;
+  height: 83vh;
+  padding: 17px;
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  border-bottom: solid 4px #6e50e3;
+  --mask: radial-gradient(34.99px at 50% calc(100% - 48px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.99px at 50% calc(100% + 18px), #0000 99%, #000 101%) 50% calc(100% - 30px) / 120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+@media (max-width: 920px) {
+  ._success {
+    height: 100vh;
+  }
+}
+._success i {
+  font-size: 55px;
+  color: #007c3c;
+}
+
+._success h2 {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+._success #fisrtp {
+  margin-bottom: 34px;
+  font-size: 15px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: -1rem;
+}
+
+.form-group label {
+  font-family: 'Poppins';
+  color: #727b80;
+  font-weight: 500;
+}
+
+.form-group p {
+  color: #000;
+  font-family: 'Poppins';
+}

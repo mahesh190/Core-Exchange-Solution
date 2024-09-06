@@ -1,0 +1,238 @@
+<div class="corCust">
+  <div class="row" style="margin-bottom: 40px">
+    <div class="col-sm-12">
+      <h3>Corporate Customer</h3>
+    </div>
+  </div>
+
+  <form [formGroup]="CorporateRegister">
+    <mat-stepper [linear]="true" #stepper>
+      <mat-step [stepControl]="basicform">
+        <div formGroupName="basicDetails">
+          <ng-template matStepLabel>Basic Details</ng-template>
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>What type of business you do ?</mat-label>
+                <mat-select formControlName="typebusiness">
+                  <mat-option *ngFor="let val of businesstype" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Product you want to enroll</mat-label>
+                <mat-select formControlName="enrollprods">
+                  <mat-option *ngFor="let val of enrollprod" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div style="display: flex; justify-content: flex-end; align-items: center">
+              <a
+                [routerLink]="['/dashboard']"
+                class="btn btn-primary btn-md"
+                style="background: #6e50e3; padding: 10px 58px; color: #fff; margin: 0 20px"
+              >
+                Cancel
+              </a>
+
+              <button
+                [disabled]="basicform.invalid"
+                mat-raised-button
+                color="primary"
+                style="padding: 3px 58px; background: #6e50e3; color: #fff"
+                matStepperNext
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step [stepControl]="businessForm" label="Business Details">
+        <div formGroupName="businessfm">
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>What is your business type ?</mat-label>
+                <mat-select formControlName="bustypes">
+                  <mat-option *ngFor="let val of busstype" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>In which region your company operates ?</mat-label>
+                <mat-select formControlName="compnyoper">
+                  <mat-option *ngFor="let val of companyoper" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>What is jurisdiction of establishment ?</mat-label>
+                <mat-select formControlName="juriesta">
+                  <mat-option *ngFor="let val of selectcount" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>What is your FATCA classification?</mat-label>
+                <mat-select formControlName="fatcaclass">
+                  <mat-option *ngFor="let val of fatcacls" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Are you CRS repotable?</mat-label>
+                <mat-select formControlName="crsreport">
+                  <mat-option *ngFor="let val of crsreports" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; align-items: center">
+            <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+            <button
+              [disabled]="businessForm.invalid"
+              mat-raised-button
+              color="primary"
+              style="margin: 0 20px; padding: 3px 58px"
+              matStepperNext
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step [stepControl]="CompanyForm" label="Company Information">
+        <div formGroupName="companyFormdetails">
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Registration Number</mat-label>
+                <input matInput required formControlName="RegistrationNumber" placeholder="Enter Registration Number" />
+                <a (click)="toggleVerification()" class="verify-link">
+                  <img
+                    *ngIf="isVerified"
+                    src="../../../assets/images/verifyIcons.png"
+                    class="img-fluid rounded-start"
+                    style="width: 18px"
+                    alt="..."
+                  />
+
+                  <span>{{ isVerified ? 'Verified' : 'Verify' }}</span>
+                </a>
+                <mat-error *ngIf="CompanyForm.value.RegistrationNumber">Please Enter Number Only</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Name of Legal Entity</mat-label>
+                <input matInput required formControlName="NameofLegalEntity" placeholder="Name of Legal Entity" />
+                <mat-error *ngIf="CompanyForm.value.NameofLegalEntity">Please Enter Character Only</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Representative Name</mat-label>
+                <input matInput required formControlName="RepresentativeName" placeholder="Enter Representative Name" />
+                <mat-error *ngIf="CompanyForm.value.RepresentativeName">Please Enter Character Only</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Designation of Representative</mat-label>
+                <input matInput required formControlName="DesignationofRepresentative" placeholder="Enter Designation of Representative" />
+                <mat-error *ngIf="CompanyForm.value.DesignationofRepresentative">Please Enter Character Only</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Email ID</mat-label>
+                <input matInput required formControlName="EmailID" placeholder="Enter Email ID" />
+                <mat-error *ngIf="CompanyForm.value.EmailID">Please Enter Valid Email ID</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Country</mat-label>
+                <mat-select formControlName="Country">
+                  <mat-option *ngFor="let val of couties" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Code</mat-label>
+                <mat-select formControlName="stdCode">
+                  <mat-option *ngFor="let val of stdCodes" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput required formControlName="ContactNumber" placeholder="Enter Contact Number" />
+                <mat-error *ngIf="CompanyForm.value.ContactNumber">Please Enter Number Only</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                <p class="lead">
+                  We take your data privacy seriously and will only use your personal information to administer your account and to provide
+                  the products and services you have requested
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+              I am the authorized person to intiate and complete onboarding formalities
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+              Permission to store and process my data
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+              I agree to recieve communication for any the services and new product launch
+            </li>
+          </ul>
+          <div class="row"></div>
+
+          <div style="display: flex; justify-content: flex-end; align-items: center">
+            <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px" matStepperPrevious>Back</button>
+
+            <button
+              [disabled]="CompanyForm.invalid"
+              mat-raised-button
+              color="accent"
+              style="margin: 0 20px; padding: 3px 58px"
+              (click)="HandleSubmit()"
+            >
+              Proceed
+            </button>
+          </div>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </form>
+</div>
