@@ -1041,32 +1041,18 @@
       "id": "4eba"
     },
     {
-      "id": "1c81",
-      "SenderID": "Sunil",
-      "ReceiverID": "Ramesh",
-      "Currency": "KOR",
-      "Amount": "8999",
-      "ExchangeRate": "899.211",
-      "RemittanceMethod": "transfer Cheque",
-      "Fees": "9090",
-      "TotalAmount": "90909",
-      "PaymentMethod": "Post",
+      "SenderID": "Rahul",
+      "ReceiverID": "Verma",
+      "Currency": "BEL",
+      "Amount": "890",
+      "ExchangeRate": "100.567",
+      "RemittanceMethod": "Prepaid",
+      "Fees": "534",
+      "TotalAmount": "29099",
+      "PaymentMethod": "cash",
       "documents": "",
-      "documentsText": "Passport.txt"
-    },
-    {
-      "SenderID": "sender1",
-      "ReceiverID": "iop",
-      "Currency": "usa",
-      "Amount": "8989",
-      "ExchangeRate": "090.212",
-      "RemittanceMethod": "tras",
-      "Fees": "899",
-      "TotalAmount": "667",
-      "PaymentMethod": "ppst",
-      "documents": "",
-      "documentsText": "scss.txt",
-      "id": "51b6"
+      "documentsText": "masters.PNG",
+      "id": "ddda"
     }
   ]
 }

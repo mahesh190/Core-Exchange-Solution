@@ -48,9 +48,10 @@
   .pcoded-inner-navbar > app-nav-group > app-nav-collapse > li:hover > a,
   .pcoded-inner-navbar > app-nav-group > app-nav-item > li.active > a,
   .pcoded-inner-navbar > app-nav-group > app-nav-item > li.pcoded-trigger > a,
-  .pcoded-inner-navbar > app-nav-group > app-nav-item > li:hover > a {
-    background: rgba(202, 202, 202, 0.3);
-
+  .pcoded-inner-navbar > app-nav-group > app-nav-item > li:hover > a  {
+    //background: rgba(202, 202, 202, 0.3);
+    background: rgb(106 80 209);
+    color: #fff;
     &:before {
       content: '';
       position: absolute;
@@ -61,6 +62,9 @@
       background: $primary-color;
     }
   }
+}
+.pcoded-inner-navbar > app-nav-group > app-nav-item > li:hover .pcoded-mtext{
+  color:#fff;
 }
 
 .flex {

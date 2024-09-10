@@ -1,5 +1,5 @@
 <div id="addModule">
-  <div class="row" style="margin-bottom: 40px">
+  <div class="row" style="margin-bottom: 17px">
     <h3>Add Module</h3>
   </div>
 
@@ -10,13 +10,13 @@
           <div class="col-md-4">
             <mat-form-field appearance="outline">
               <mat-label>Module Name</mat-label>
-              <input matInput placeholder="Module Name" formControlName="Module Name" />
+              <input matInput placeholder="Module Name" formControlName="moduleName" />
             </mat-form-field>
           </div>
           <div class="col-md-4" appearance="outline">
             <mat-form-field appearance="outline">
               <mat-label>Module Group</mat-label>
-              <input matInput placeholder="Module Group" formControlName="email" />
+              <input matInput placeholder="Module Group" formControlName="moduleGroup" />
             </mat-form-field>
           </div>
         </div>
@@ -26,12 +26,19 @@
         <div class="row">
           <div class="card">
             <div class="card-body">
-              <div class="row" style="margin-bottom: 40px">
+              <div class="row" style="margin-bottom: 22px; display: flex; justify-content: center; align-items: center">
                 <div class="col-md-6">
-                  <h6 style="font-size: 16px">List Of Sub Module</h6>
+                  <h6 style="font-size: 16px">
+                    List Of Sub Module :
+                    <span style="margin: 0 6px">{{ rowCount }}</span>
+                  </h6>
                 </div>
-                <div class="col-md-6" style="display: flex; justify-content: flex-end; align-items: center">
-                  <a class="btn btn-primary" style="background-color: #6e50e3; padding: 12px 56px" (click)="addPhone()">
+                <div class="col-md-6 addBtnClass">
+                  <a
+                    class="btn btn-primary"
+                    style="background-color: #6e50e3; padding: 12px 56px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                    (click)="addSub_module()"
+                  >
                     <i class="fa fa-plus"></i>
                     Add
                   </a>
@@ -42,57 +49,47 @@
                   <thead>
                     <tr style="border-bottom: 1px solid #e9dbdb">
                       <th>#</th>
-                      <th>Sub Module Name</th>
+                      <th style="width: 18vw">Sub Module Name</th>
                       <th>Template</th>
                       <th>Action</th>
                     </tr>
                   </thead>
 
-                  <tbody></tbody>
-                </table>
-              </div>
-              <div formArrayName="phones">
-                <div *ngFor="let phone of phoneForms.controls; let i = index" [formGroupName]="i">
-                  <div class="row">
-                    <div class="col-3" style="display: flex; justify-content: center; align-items: center">
-                      {{ i + 1 }}
-                    </div>
-                    <div class="col-3">
-                      <mat-form-field appearance="outline">
-                        <mat-label>Sub Module Name</mat-label>
+                  <tbody formArrayName="subModules">
+                    <tr *ngFor="let subModule of SubModdulesForms.controls; let i = index" [formGroupName]="i">
+                      <td>{{ i + 1 }}</td>
+                      <td>
+                        <mat-form-field appearance="outline" style="width: 128% !important">
+                          <mat-label>Sub Module Name</mat-label>
 
-                        <input matInput placeholder="Sub Module Name" formControlName="prefix" />
-                      </mat-form-field>
-                    </div>
-                    <div class="col-md-4">
-                        <mat-form-field appearance="outline">
+                          <input matInput placeholder="Sub Module Name" formControlName="subModuleName" />
+                        </mat-form-field>
+                      </td>
+                      <td>
+                        <mat-form-field appearance="outline" style="width: 128% !important">
                           <mat-label>Template</mat-label>
-                          <mat-select formControlName="line">
+                          <mat-select formControlName="template">
                             <mat-option *ngFor="let val of templates" [value]="val">{{ val }}</mat-option>
                           </mat-select>
                         </mat-form-field>
-                      </div>
+                      </td>
 
-                    <div class="col-3" style="margin: 11px auto; width: inherit; padding: 9px 47px">
+                      <td>
                         <button
-                    
-                        style="background: #ff2e2e"
-                    
-                        class="btn btn-danger btn-sm rounded-0"
-                        type="button"
-                        (click)="deletePhone(i)"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Delete"
-                      >
-                        <i class="fa fa-trash"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-
-                
+                          style="background: #ff2e2e"
+                          class="btn btn-danger btn-sm rounded-0"
+                          type="button"
+                          (click)="deleteSub_module(i)"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Delete"
+                        >
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -101,9 +98,23 @@
     </div>
 
     <div style="display: flex; justify-content: flex-end; align-items: center">
-      <button mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px">Cancel</button>
+      <a
+        [routerLink]="['/moduleMaster']"
+        mat-raised-button
+        color="primary"
+        style="margin: 0 20px; padding: 3px 58px; background: #fff; color: #6e50e3; font-weight: 900; font-family: 'Poppins'"
+      >
+        Cancel
+      </a>
 
-      <button type="submit" mat-raised-button color="primary" style="margin: 0 20px; padding: 3px 58px">Submit</button>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        style="background-color: #6e50e3; margin: 0 20px; padding: 3px 58px; font-family: 'Poppins'"
+      >
+        Submit
+      </button>
     </div>
   </form>
 </div>

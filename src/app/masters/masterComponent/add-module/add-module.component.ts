@@ -8,16 +8,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 323, name: 'sqs', weight:0, symbol: '2ssq'},
- 
-];
 @Component({
   selector: 'app-add-module',
   standalone: true,
@@ -27,43 +17,48 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AddModuleComponent {
   myform: FormGroup;
+  rowCount: number = 1;
   constructor(private fb: FormBuilder) {}
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
 
   templates: string[] = ['Screen', 'Report', 'Dashboard'];
 
   ngOnInit() {
     this.myform = this.fb.group({
-      email: ['', Validators.required, Validators.email],
-      phones: this.fb.array([this.initRows()]),
+      moduleName: ['', Validators.required, Validators.email],
+      moduleGroup: ['', Validators.required, Validators.email],
+      subModules: this.fb.array([this.initRows()]),
     });
 
     this.myform.valueChanges.subscribe(console.log);
   }
 
-  get phoneForms() {
-    return this.myform.get('phones') as FormArray;
+  get SubModdulesForms() {
+    return this.myform.get('subModules') as FormArray;
   }
+  
   initRows() {
-    const phone = this.fb.group({
-      area: [],
-      prefix: [],
-      line: [],
+    const sub_module = this.fb.group({
+      subModuleName: [],
+      template: []
     });
-    return phone
-  }
-  addPhone() {
-    const phone = this.fb.group({
-      area: [],
-      prefix: [],
-      line: [],
-    });
-    this.phoneForms.push(phone);
+    return sub_module
   }
 
-  deletePhone(i) {
-    this.phoneForms.removeAt(i);
+
+  addSub_module() {
+    const sub_module = this.fb.group({
+      subModuleName: [],
+      template: []
+    });
+    this.SubModdulesForms.push(sub_module);
+    this.rowCount = this.SubModdulesForms.length;
+    alert( this.rowCount)
+  }
+
+  deleteSub_module(i) {
+    this.SubModdulesForms.removeAt(i);
+    this.rowCount = this.SubModdulesForms.length;
+    alert( this.rowCount)
   }
   submitForm() {
     console.log(this.myform.value);

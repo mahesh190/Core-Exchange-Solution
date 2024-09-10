@@ -12,20 +12,19 @@
     <div class="row">
    
       <div class="col-sm-12">
-     <div class="card-title" style="padding: 20px;letter-spacing: 1px;">Overview of all remittance activities, including recent transactions, pending transfers, 
-        and key metrics</div>
-          <apx-chart
-            [dataLabels]="line3CAC.dataLabels!"
-            [chart]="line3CAC.chart!"
-            [stroke]="line3CAC.stroke!"
-            [colors]="line3CAC.colors!"
-            [series]="line3CAC.series!"
-            [title]="line3CAC.title!"
-            [markers]="line3CAC.markers!"
-            [tooltip]="line3CAC.tooltip!"
-            [grid]="line3CAC.grid!"
-            [xaxis]="line3CAC.xaxis!"
-          ></apx-chart>
+     <div class="card-title" style="padding: 20px;letter-spacing: 1px;">]</div>
+        <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [fill]="chartOptions.fill"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [xaxis]="chartOptions.xaxis"
+      ></apx-chart>
       </div>
      
     </div>

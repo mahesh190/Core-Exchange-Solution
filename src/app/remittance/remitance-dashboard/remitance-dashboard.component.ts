@@ -4,6 +4,33 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { ChartDB } from 'src/app/fack-db/chartData';
 import { ApexOptions, NgApexchartsModule } from 'ng-apexcharts';
+import {
+  ApexAxisChartSeries,
+  ApexChart,
+  ChartComponent,
+  ApexDataLabels,
+  ApexPlotOptions,
+  ApexYAxis,
+  ApexLegend,
+  ApexStroke,
+  ApexXAxis,
+  ApexFill,
+  ApexTooltip
+} from "ng-apexcharts";
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  yaxis: ApexYAxis;
+  xaxis: ApexXAxis;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  stroke: ApexStroke;
+  legend: ApexLegend;
+};
+
 @Component({
   selector: 'app-remitance-dashboard',
   standalone: true,
@@ -11,192 +38,69 @@ import { ApexOptions, NgApexchartsModule } from 'ng-apexcharts';
   templateUrl: './remitance-dashboard.component.html',
   styleUrl: './remitance-dashboard.component.scss'
 })
-export class RemitanceDashboardComponent implements OnInit, OnDestroy {
-  // public props
-  // eslint-disable-next-line
-  chartDB: any;
-  lastDate!: number;
-  // eslint-disable-next-line
-  data: any;
-  // eslint-disable-next-line
-  intervalSub: any;
-  // eslint-disable-next-line
-  intervalMain: any;
+export class RemitanceDashboardComponent  {
+  public chartOptions: Partial<ChartOptions>;
 
-  line1CAC!: ApexOptions;
-  line2CAC!: ApexOptions;
-  line3CAC: ApexOptions;
-  area1CAC: ApexOptions;
-  bar1CAC: ApexOptions;
-  chartOptions_11: ApexOptions;
-  bar2CAC: ApexOptions;
-  bar3CAC: ApexOptions;
-  bar4CAC: ApexOptions;
-  mixed1CAC: ApexOptions;
-  mixed2CAC: ApexOptions;
-  candlestickCAC: ApexOptions;
-  bubble1CAC: ApexOptions;
-  bubble2CAC: ApexOptions;
-  scatter1CAC: ApexOptions;
-  scatter2CAC: ApexOptions;
-  heatMap1CAC: ApexOptions;
-  heatMap2CAC: ApexOptions;
-  pie1CAC: ApexOptions;
-  pie2CAC: ApexOptions;
-  radialBar1CAC: ApexOptions;
-  radialBar2CAC: ApexOptions;
-  radar1CAC: ApexOptions;
-  radar2CAC: ApexOptions;
-
-  // constructor
   constructor() {
-    this.chartDB = ChartDB;
-    const {
-      line1CAC,
-      line3CAC,
-      area1CAC,
-      bar1CAC,
-      chartOptions_11,
-      bar2CAC,
-      bar3CAC,
-      bar4CAC,
-      mixed1CAC,
-      mixed2CAC,
-      candlestickCAC,
-      bubble1CAC,
-      bubble2CAC,
-      scatter1CAC,
-      scatter2CAC,
-      heatMap1CAC,
-      heatMap2CAC,
-      pie1CAC,
-      pie2CAC,
-      radialBar1CAC,
-      radialBar2CAC,
-      radar1CAC,
-      radar2CAC
-    } = this.chartDB;
+    this.chartOptions = {
+      series: [
+        {
+          name: 'Total Transactions',
+          data: [45, 522, 348, 24, 332, 26, 221, 270, 6, 8, 15, 10]
+        },
+        {
+          name: 'Pending Remittances',
+          data: [35, 451, 632, 42, 132, 518, 239, 37, 356, 51, 324, 35]
+        }
+      ],
 
-    this.line1CAC = line1CAC;
-    this.line3CAC = line3CAC;
-    this.area1CAC = area1CAC;
-    this.bar1CAC = bar1CAC;
-    this.chartOptions_11 = chartOptions_11;
-    this.bar2CAC = bar2CAC;
-    this.bar3CAC = bar3CAC;
-    this.bar4CAC = bar4CAC;
-    this.mixed1CAC = mixed1CAC;
-    this.mixed2CAC = mixed2CAC;
-    this.candlestickCAC = candlestickCAC;
-    this.bubble1CAC = bubble1CAC;
-    this.bubble2CAC = bubble2CAC;
-    this.scatter1CAC = scatter1CAC;
-    this.scatter2CAC = scatter2CAC;
-    this.heatMap1CAC = heatMap1CAC;
-    this.heatMap2CAC = heatMap2CAC;
-    this.pie1CAC = pie1CAC;
-    this.pie2CAC = pie2CAC;
-    this.radialBar1CAC = radialBar1CAC;
-    this.radialBar2CAC = radialBar2CAC;
-    this.radar1CAC = radar1CAC;
-    this.radar2CAC = radar2CAC;
-
-    this.lastDate = 0;
-    this.data = [];
-    this.getDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, { min: 10, max: 90 });
-    this.line2CAC = {
+      
       chart: {
-        height: 300,
-        type: 'line',
-        animations: {
-          enabled: true,
-          easing: 'linear',
-          dynamicAnimation: {
-            speed: 2000
-          }
-        },
-        toolbar: {
-          show: false
-        },
-        zoom: {
-          enabled: false
+        type: "bar",
+        height: 350
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "88%"
         }
       },
       dataLabels: {
         enabled: false
       },
       stroke: {
-        curve: 'smooth'
-      },
-      series: [
-        {
-          data: this.data
-        }
-      ],
-      colors: ['#4680ff'],
-      title: {
-        text: 'Dynamic Updating Chart',
-        align: 'left'
-      },
-      markers: {
-        size: 0
+        show: true,
+        width: 2,
+        colors: ["transparent"]
       },
       xaxis: {
-        type: 'datetime',
-        range: 777600000
+        categories: [
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ]
       },
       yaxis: {
-        max: 100
+        title: {
+          text: "$ (thousands)"
+        }
       },
-      legend: {
-        show: false
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function(val) {
+            return "$ " + val + " thousands";
+          }
+        }
       }
     };
-  }
-
-  // life cycle event
-  ngOnInit() {
-    this.intervalSub = setInterval(() => {
-      this.getNewSeries(this.lastDate, { min: 10, max: 90 });
-    }, 2000);
-
-    this.intervalMain = setInterval(() => {
-      this.resetData();
-    }, 60000);
-  }
-  ngOnDestroy() {
-    if (this.intervalSub) {
-      clearInterval(this.intervalSub);
-    }
-    if (this.intervalMain) {
-      clearInterval(this.intervalMain);
-    }
-  }
-
-  // public method
-  getDayWiseTimeSeries(baseval: number, count: number, yrange: { min: number; max: number }) {
-    let i = 0;
-    while (i < count) {
-      const x = baseval;
-      const y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-
-      this.data.push({ x, y });
-      this.lastDate = baseval;
-      baseval += 86400000;
-      i++;
-    }
-  }
-
-  resetData() {
-    this.data = this.data.slice(this.data.length - 10, this.data.length);
-  }
-
-  getNewSeries(baseval: number, yrange: { min: number; max: number }) {
-    const newDate = baseval + 86400000;
-    this.lastDate = newDate;
-    this.data.push({
-      x: newDate,
-      y: Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
-    });
   }
 }
